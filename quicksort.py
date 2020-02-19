@@ -24,4 +24,6 @@ def quick_sort(sorting_list:list) -> list:
         return(quick_sort([element for element in sorting_list[1:] if element <=sorting_list[0]])
             + [sorting_list[0]] + quick_sort([element for element in sorting_list[1:] if element > sorting_list[0]])
         )
-    
+
+sorted_list = quick_sort(orig_list)
+print(sorted_list)
