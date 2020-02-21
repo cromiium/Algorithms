@@ -10,7 +10,13 @@ insertionsort:
     inserts element A[j] into the sorted sequences A[1..j-1]
 '''
 
-for index in range(1,len(orig_list)):
-    insertion_index = index
-    while(insertion_index > 0 and orig_list[insertion_index-1]):
-        orig_list
+def insert_sort(sorting_list:list) -> list:
+    for index in range(1,len(orig_list)):
+        insertion_index = index
+        while(insertion_index > 0 and sorting_list[insertion_index-1] > sorting_list[insertion_index]):
+            sorting_list[insertion_index], sorting_list[insertion_index-1] = sorting_list[insertion_index-1], sorting_list[insertion_index]
+            insertion_index -= 1
+    return sorting_list
+
+sorted_list = insert_sort(orig_list)
+print(sorted_list)
